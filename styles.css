@@ -1,0 +1,8 @@
+body {
+  margin: 0;
+}
+
+.container {
+  min-height: calc(100vh - 20vh);
+  padding: 10vh 40vw 10vh 10vw;
+}
