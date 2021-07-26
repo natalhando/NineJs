@@ -72,5 +72,13 @@ const adicionarSecao = (valor) => {
   narrativa.appendChild(elemento);
 }
 
+const adicionarImagem = (valor,he, wi) => {
+  var elemento = document.createElement("IMG");
+  elemento.src = valor;
+  elemento.style.height = he;
+  elemento.style.width = wi;  
+  narrativa.appendChild(elemento);
+}
+
 configuracoes();
 historia();
