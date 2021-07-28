@@ -74,17 +74,22 @@ const adicionarSecao = (valor) => {
 
 let adicionarImagem = (valor, wi, he) => {
   var elemento = document.createElement("IMG");
+  
   if(wi == undefined && he == undefined){
     elemento.src = valor;
     elemento.style.height = "250px"; 
     elemento.style.width = "500px";
-    narrativa.appendChild(elemento);      
-  }else if(he == 'undefined'){
+    narrativa.appendChild(elemento);     
+      
+  }else if(he == undefined){
     elemento.src = valor;
-    let newheight = (elemento.height / elemento.width) * wi; //Formula para manter a proporcao.  
-    elemento.style.height = newheight + "px";
-    elemento.style.width = wi;
-    narrativa.appendChild(elemento);
+    elemento.addEventListener("load", function () {
+      let newheight = (elemento.height/ elemento.width) * wi; //Formula para manter a proporcao. 
+      elemento.style.height = newheight + "px";
+      elemento.style.width = wi;
+      narrativa.appendChild(elemento);
+    });   
+
   }else{
     elemento.src = valor;
     elemento.style.width = wi + "px";
