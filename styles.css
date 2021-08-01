@@ -10,9 +10,13 @@ body {
 button {
   border: none;
   cursor: pointer;
-  font-family: Times New Roman, sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   line-height: 30px;
   margin-bottom: 5px;
   text-align: left;
   width: 100%;
+}
+
+button:disabled {
+  opacity: 0.6;
 }

@@ -91,17 +91,26 @@ const criarOpcao = (valor, funcao, {
 }
 
 const adicionarOpcoes = (lista) => {
+  var escolhas = document.createElement("div");
   lista.map((valor) => {
     var elemento = document.createElement("button");
     elemento.innerHTML = valor.rotulo
-    elemento.onclick = valor.comportamento;
+    elemento.onclick = () => {
+      valor.comportamento();
+      elemento.style.opacity = 1;
+      elemento.style.borderLeft = "2px solid black";
+      elemento.style.paddingLeft = "10px";
+      escolhas.style.pointerEvents = "none";
+    };
     elemento.setAttribute("style", `
       background-color: ${valor.opcoes.corDoFundo};
       color: ${valor.opcoes.cor};
+      ${valor.opcoes.inativa && 'cursor: unset;'}
     `);
     elemento.disabled = valor.opcoes.inativa;
-    narrativa.appendChild(elemento);
+    escolhas.appendChild(elemento);
   })
+  narrativa.appendChild(escolhas);
 }
 
 configuracoes();
