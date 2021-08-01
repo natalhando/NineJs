@@ -113,5 +113,20 @@ const adicionarOpcoes = (lista) => {
   narrativa.appendChild(escolhas);
 }
 
+const adicionarImagem = (valor, largura, altura) => {
+  var elemento = document.createElement("IMG");
+
+  elemento.src = valor;
+
+  if (altura == undefined) {
+    largura == undefined ? elemento.style.maxWidth = "100%" : elemento.style.width = largura;
+  } else {
+    elemento.style.width = largura;
+    elemento.style.height = altura;
+  }
+
+  narrativa.appendChild(elemento);
+}
+
 configuracoes();
 historia();
