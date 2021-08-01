@@ -6,3 +6,17 @@ body {
   min-height: calc(100vh - 20vh);
   padding: 10vh 40vw 10vh 10vw;
 }
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: 'Times New Roman', sans-serif;
+  line-height: 30px;
+  margin-bottom: 5px;
+  text-align: left;
+  width: 100%;
+}
+
+button:disabled {
+  opacity: 0.6;
+}
