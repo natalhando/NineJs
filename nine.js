@@ -105,6 +105,7 @@ const adicionarOpcoes = (lista) => {
     elemento.setAttribute("style", `
       background-color: ${valor.opcoes.corDoFundo};
       color: ${valor.opcoes.cor};
+      font-size: ${preferencias.tamanhoFonte};
       ${valor.opcoes.inativa && 'cursor: unset;'}
     `);
     elemento.disabled = valor.opcoes.inativa;
