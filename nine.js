@@ -94,7 +94,8 @@ const adicionarOpcoes = (lista) => {
   var escolhas = document.createElement("div");
   lista.map((valor) => {
     var elemento = document.createElement("button");
-    elemento.innerHTML = valor.rotulo
+    elemento.innerHTML = valor.rotulo;
+    elemento.classList.add("escolha");
     elemento.onclick = () => {
       valor.comportamento();
       elemento.style.opacity = 1;
@@ -127,6 +128,34 @@ const adicionarImagem = (valor, largura, altura) => {
   }
 
   narrativa.appendChild(elemento);
+}
+
+const ler = (rotulo, sequencia) => {
+  var elemento = document.createElement("h4");
+
+  var elementoTexto = document.createTextNode(rotulo);
+  elemento.style.fontSize = preferencias.tamanhoFonte;
+  elemento.style.color = preferencias.cor;
+  elemento.appendChild(elementoTexto);
+
+  var campo = document.createElement("input");
+  campo.style.fontSize = preferencias.tamanhoFonte;
+  var botao = document.createElement("button");
+  botao.innerHTML = "Prosseguir";
+  botao.style.fontSize = preferencias.tamanhoFonte;
+  botao.onclick = () => {
+    campo.disabled = true;
+    botao.remove();
+    sequencia(campo.value);
+  }
+
+  var grupo = document.createElement("div");
+
+  grupo.appendChild(campo);
+  grupo.appendChild(botao);
+
+  narrativa.appendChild(elemento);
+  narrativa.appendChild(grupo);
 }
 
 configuracoes();

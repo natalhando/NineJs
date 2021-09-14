@@ -2,21 +2,41 @@ body {
   margin: 0;
 }
 
+* {
+  font-family: 'Times New Roman', sans-serif;
+}
+
 .container {
   min-height: calc(100vh - 20vh);
   padding: 10vh 40vw 10vh 10vw;
 }
 
+h4 {
+  margin-block-end: 0;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+  width: 50%;
+  height: 28px;
+  margin-right: 10px;
+}
+
 button {
   border: none;
   cursor: pointer;
-  font-family: 'Times New Roman', sans-serif;
   line-height: 30px;
   margin-bottom: 5px;
   text-align: left;
+  height: 36px;
+}
+
+button.escolha {
   width: 100%;
 }
 
-button:disabled {
+button.escolha:disabled {
   opacity: 0.6;
 }
