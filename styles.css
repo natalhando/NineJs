@@ -40,3 +40,16 @@ button.escolha {
 button.escolha:disabled {
   opacity: 0.6;
 }
+
+div.selecionada {
+  pointer-events: none;
+}
+
+div.selecionada button:not(.selecionada) {
+  opacity: 0.6;
+}
+
+button.escolha.selecionada {
+  border-left: 2px solid black;
+  padding-left: 10px;
+}

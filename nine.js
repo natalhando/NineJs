@@ -97,11 +97,9 @@ const adicionarOpcoes = (lista) => {
     elemento.innerHTML = valor.rotulo;
     elemento.classList.add("escolha");
     elemento.onclick = () => {
+      escolhas.classList.add("selecionada");
+      elemento.classList.add("selecionada");
       valor.comportamento();
-      elemento.style.opacity = 1;
-      elemento.style.borderLeft = "2px solid black";
-      elemento.style.paddingLeft = "10px";
-      escolhas.style.pointerEvents = "none";
     };
     elemento.setAttribute("style", `
       background-color: ${valor.opcoes.corDoFundo};
