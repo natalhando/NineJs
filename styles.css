@@ -3,7 +3,7 @@ body {
 }
 
 * {
-  font-family: 'Times New Roman', sans-serif;
+  font-family: "Times New Roman", sans-serif;
 }
 
 .container {
@@ -19,18 +19,18 @@ input {
   border: none;
   border-bottom: 1px solid black;
   border-radius: 0;
-  width: 50%;
   height: 28px;
   margin-right: 10px;
+  width: 50%;
 }
 
 button {
   border: none;
   cursor: pointer;
+  height: 36px;
   line-height: 30px;
   margin-bottom: 5px;
   text-align: left;
-  height: 36px;
 }
 
 button.escolha {
